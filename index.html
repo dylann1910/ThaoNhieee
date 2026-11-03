@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Chúc Mừng Sinh Nhật Thảo Nhi 22 Tuổi! 🎂🌹</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#e11d48',
+                            darkred: '#be123c',
+                            deepred: '#881337',
+                            gold: '#f59e0b',
+                            yellow: '#fde047',
+                            cream: '#fff5f5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
+</head>
+<body class="text-gray-900 antialiased selection:bg-red-200 selection:text-red-900">
+
+    <!-- Ambient floating emojis background -->
+    <div id="floating-elements-bg"></div>
+
+    <!-- ================= INTRO OVERLAY (CHÚ CHÓ & HỘP QUÀ SINH NHẬT) ================= -->
+    <div id="birthday-intro-overlay">
+        <div class="intro-modal-card">
+            <!-- Header Prompt -->
+            <div id="intro-title-prompt" class="mb-3">
+                <span class="inline-block px-3 py-1 bg-yellow-300 text-gray-900 border-2 border-black rounded-full font-black text-xs uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-2 animate-bounce">
+                    📦 BƯU KIỆN ĐẶC BIỆT GỬI THẢO NHI 22 TUỔI
+                </span>
+                <h3 class="text-xl sm:text-2xl font-black text-gray-900">Có Một Món Quà Bí Ẩn Đang Chờ Em!</h3>
+                <p class="text-xs sm:text-sm font-bold text-red-600 mt-1">
+                    👇 Bấm vào hộp quà trên tay chú chó để mở ngay! 👇
+                </p>
+            </div>
+
+            <!-- Dog with Gift Box / Flowers SVG Container -->
+            <div class="relative py-2 flex items-center justify-center">
+                
+                <!-- 1. Dog holding box -->
+                <svg id="dog-holding-box" viewBox="0 0 320 280" class="w-60 sm:w-72 h-auto mx-auto select-none">
+                    <!-- Dog Body -->
+                    <ellipse cx="160" cy="190" rx="65" ry="60" fill="#d49449" stroke="#1e1b18" stroke-width="4"/>
+                    <ellipse cx="160" cy="195" rx="42" ry="40" fill="#fbe4be"/>
+                    
+                    <!-- Dog Head -->
+                    <ellipse cx="160" cy="120" rx="55" ry="48" fill="#d49449" stroke="#1e1b18" stroke-width="4"/>
+                    
+                    <!-- Ears -->
+                    <polygon points="115,95 100,50 135,70" fill="#b3702b" stroke="#1e1b18" stroke-width="3.5" stroke-linejoin="round"/>
+                    <polygon points="205,95 220,50 185,70" fill="#b3702b" stroke="#1e1b18" stroke-width="3.5" stroke-linejoin="round"/>
+                    
+                    <!-- Party Hat -->
+                    <polygon points="160,25 142,75 178,75" fill="#e11d48" stroke="#1e1b18" stroke-width="3"/>
+                    <circle cx="160" cy="22" r="6" fill="#fde047" stroke="#1e1b18" stroke-width="2"/>
+                    <line x1="148" y1="50" x2="172" y2="50" stroke="#fde047" stroke-width="3"/>
+
+                    <!-- Dog Muzzle -->
+                    <ellipse cx="160" cy="135" rx="32" ry="24" fill="#fbe4be" stroke="#1e1b18" stroke-width="3"/>
+                    <ellipse cx="160" cy="122" rx="9" ry="7" fill="#1e1b18"/>
+                    <!-- Cute Meme Doge Eyebrows & Eyes -->
+                    <ellipse cx="138" cy="110" rx="6" ry="8" fill="#1e1b18"/>
+                    <circle cx="136" cy="107" r="2.5" fill="#ffffff"/>
+                    <ellipse cx="182" cy="110" rx="6" ry="8" fill="#1e1b18"/>
+                    <circle cx="180" cy="107" r="2.5" fill="#ffffff"/>
+                    <path d="M 130 98 Q 138 94 146 98" stroke="#7a4613" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    <path d="M 174 98 Q 182 94 190 98" stroke="#7a4613" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    <!-- Mouth -->
+                    <path d="M 152 135 Q 160 142 160 135 Q 160 142 168 135" stroke="#1e1b18" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+                    <!-- Interactive Bouncing Gift Box in Paws -->
+                    <g id="intro-gift-box-wrapper" class="intro-gift-box box-shake cursor-pointer">
+                        <!-- Gift Box Body -->
+                        <rect x="110" y="165" width="100" height="85" rx="12" fill="#e11d48" stroke="#1e1b18" stroke-width="4"/>
+                        <!-- Golden Ribbon Vertical -->
+                        <rect x="150" y="165" width="20" height="85" fill="#fde047" stroke="#1e1b18" stroke-width="2.5"/>
+                        <!-- Golden Ribbon Horizontal -->
+                        <rect x="110" y="195" width="100" height="20" fill="#fde047" stroke="#1e1b18" stroke-width="2.5"/>
+                        <!-- Ribbon Bow -->
+                        <ellipse cx="145" cy="160" rx="14" ry="9" transform="rotate(-25 145 160)" fill="#fde047" stroke="#1e1b18" stroke-width="2.5"/>
+                        <ellipse cx="175" cy="160" rx="14" ry="9" transform="rotate(25 175 160)" fill="#fde047" stroke="#1e1b18" stroke-width="2.5"/>
+                        <circle cx="160" cy="164" r="5" fill="#f59e0b" stroke="#1e1b18" stroke-width="2"/>
+                        <!-- Tag Text on Box -->
+                        <rect x="120" y="218" width="80" height="22" rx="6" fill="#ffffff" stroke="#1e1b18" stroke-width="2"/>
+                        <text x="160" y="233" font-size="10" font-family="'Fredoka', sans-serif" font-weight="900" fill="#e11d48" text-anchor="middle">BẤM MỞ QUÀ 👆</text>
+                    </g>
+
+                    <!-- Dog Paws holding box -->
+                    <ellipse cx="108" cy="190" rx="12" ry="16" transform="rotate(20 108 190)" fill="#d49449" stroke="#1e1b18" stroke-width="3"/>
+                    <ellipse cx="212" cy="190" rx="12" ry="16" transform="rotate(-20 212 190)" fill="#d49449" stroke="#1e1b18" stroke-width="3"/>
+                </svg>
+
+                <!-- 2. Dog holding flowers (Initially Hidden) -->
+                <svg id="dog-holding-flowers" viewBox="0 0 320 280" class="w-60 sm:w-72 h-auto mx-auto select-none hidden">
+                    <!-- Dog Body -->
+                    <ellipse cx="160" cy="190" rx="65" ry="60" fill="#d49449" stroke="#1e1b18" stroke-width="4"/>
+                    <ellipse cx="160" cy="195" rx="42" ry="40" fill="#fbe4be"/>
+                    
+                    <!-- Dog Head -->
+                    <ellipse cx="160" cy="120" rx="55" ry="48" fill="#d49449" stroke="#1e1b18" stroke-width="4"/>
+                    
+                    <!-- Ears -->
+                    <polygon points="115,95 100,50 135,70" fill="#b3702b" stroke="#1e1b18" stroke-width="3.5" stroke-linejoin="round"/>
+                    <polygon points="205,95 220,50 185,70" fill="#b3702b" stroke="#1e1b18" stroke-width="3.5" stroke-linejoin="round"/>
+                    
+                    <!-- Party Hat -->
+                    <polygon points="160,25 142,75 178,75" fill="#e11d48" stroke="#1e1b18" stroke-width="3"/>
+                    <circle cx="160" cy="22" r="6" fill="#fde047" stroke="#1e1b18" stroke-width="2"/>
+                    <line x1="148" y1="50" x2="172" y2="50" stroke="#fde047" stroke-width="3"/>
+
+                    <!-- Blush Cheeks -->
+                    <circle cx="125" cy="128" r="10" fill="#ff758f" opacity="0.6"/>
+                    <circle cx="195" cy="128" r="10" fill="#ff758f" opacity="0.6"/>
+
+                    <!-- Dog Muzzle -->
+                    <ellipse cx="160" cy="135" rx="32" ry="24" fill="#fbe4be" stroke="#1e1b18" stroke-width="3"/>
+                    <ellipse cx="160" cy="122" rx="9" ry="7" fill="#1e1b18"/>
+                    <!-- Smiling Happy Eyes ^w^ -->
+                    <path d="M 130 110 Q 138 98 146 110" stroke="#1e1b18" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M 174 110 Q 182 98 190 110" stroke="#1e1b18" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <!-- Happy Smile Mouth with Tongue -->
+                    <path d="M 150 134 Q 160 144 170 134" stroke="#1e1b18" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    <path d="M 155 138 C 155 148, 165 148, 165 138 Z" fill="#ff4d6d"/>
+
+                    <!-- Bouquet of Red Roses in Paws -->
+                    <g transform="translate(160, 195)">
+                        <!-- Wrapper Cone -->
+                        <polygon points="0,50 -40,-10 40,-10" fill="#e11d48" stroke="#1e1b18" stroke-width="3.5"/>
+                        <line x1="-40" y1="-10" x2="40" y2="-10" stroke="#fde047" stroke-width="4"/>
+                        <text x="0" y="32" font-size="10" font-family="'Fredoka', sans-serif" font-weight="900" fill="#ffffff" text-anchor="middle">TẶNG NHI 🌹</text>
+                        
+                        <!-- Big Red Roses & Leaves -->
+                        <circle cx="0" cy="-30" r="18" fill="#be123c" stroke="#1e1b18" stroke-width="2.5"/>
+                        <circle cx="0" cy="-30" r="12" fill="#e11d48"/>
+                        <circle cx="0" cy="-30" r="6" fill="#f43f5e"/>
+                        <circle cx="-28" cy="-22" r="15" fill="#be123c" stroke="#1e1b18" stroke-width="2.5"/>
+                        <circle cx="-28" cy="-22" r="9" fill="#e11d48"/>
+                        <circle cx="28" cy="-22" r="15" fill="#be123c" stroke="#1e1b18" stroke-width="2.5"/>
+                        <circle cx="28" cy="-22" r="9" fill="#e11d48"/>
+                        <circle cx="-14" cy="-42" r="14" fill="#be123c" stroke="#1e1b18" stroke-width="2.5"/>
+                        <circle cx="-14" cy="-42" r="8" fill="#e11d48"/>
+                        <circle cx="14" cy="-42" r="14" fill="#be123c" stroke="#1e1b18" stroke-width="2.5"/>
+                        <circle cx="14" cy="-42" r="8" fill="#e11d48"/>
+                        <!-- Ribbon bow -->
+                        <ellipse cx="-8" cy="6" rx="8" ry="5" fill="#fde047" stroke="#1e1b18" stroke-width="2"/>
+                        <ellipse cx="8" cy="6" rx="8" ry="5" fill="#fde047" stroke="#1e1b18" stroke-width="2"/>
+                        <circle cx="0" cy="6" r="3" fill="#f59e0b"/>
+                    </g>
+
+                    <!-- Dog Paws Holding Bouquet -->
+                    <ellipse cx="112" cy="185" rx="12" ry="16" transform="rotate(25 112 185)" fill="#d49449" stroke="#1e1b18" stroke-width="3"/>
+                    <ellipse cx="208" cy="185" rx="12" ry="16" transform="rotate(-25 208 185)" fill="#d49449" stroke="#1e1b18" stroke-width="3"/>
+                </svg>
+
+            </div>
+
+            <!-- Celebration Text & Enter Button (Shown after exploding) -->
+            <div id="intro-celebration-text" class="hidden text-center space-y-2 mt-2">
+                <div class="inline-block px-3 py-1 bg-yellow-300 text-gray-900 border-2 border-black rounded-full font-black text-xs uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    🎉 BÙM! MỞ QUÀ THÀNH CÔNG 🎉
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-black text-red-600 uppercase leading-tight tracking-tight">
+                    CHÚC MỪNG SINH NHẬT<br>THẢO NHI 22 TUỔI! 🎂🌹
+                </h2>
+                <p class="text-xs sm:text-sm font-bold text-gray-700 max-w-sm mx-auto leading-relaxed">
+                    "Chúc em tuổi 22 luôn rực rỡ như hoa hồng đỏ, xinh đẹp gấp bội, công việc thăng hoa, tiền tài ngập tràn và luôn ngập tràn tiếng cười hạnh phúc!" 🌹✨💖
+                </p>
+                <div class="pt-3">
+                    <button id="enter-site-btn" class="brutal-btn w-full sm:w-auto px-6 py-3 bg-red-600 text-white font-black text-sm sm:text-base hover:bg-red-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        🚀 Vào Quẩy Tiệc Ngay Thôi! ✨
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-3 border-black px-3 sm:px-4 py-2.5 shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
+        <div class="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl sm:text-3xl animate-bounce">🌹</span>
+                <span class="font-black text-lg sm:text-xl tracking-tight text-red-600 uppercase">Thảo Nhi 22 Tuổi</span>
+            </div>
+            
+            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                <button id="replay-intro-btn" class="px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-bold bg-yellow-100 text-yellow-900 border-2 border-black rounded-lg hover:bg-yellow-200 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    🐶 Xem Lại Intro
+                </button>
+                <a href="#cake-section" class="px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-bold bg-red-100 text-red-700 border-2 border-black rounded-lg hover:bg-red-200 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    🎂 Thổi Nến
+                </a>
+                <a href="#bunny-section" class="px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-bold bg-amber-100 text-amber-800 border-2 border-black rounded-lg hover:bg-amber-200 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    🐰 Bé Thỏ
+                </a>
+                <a href="#bouquet-section" class="px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-bold bg-rose-200 text-rose-900 border-2 border-black rounded-lg hover:bg-rose-300 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    💐 Tạo Bó Hoa
+                </a>
+                <a href="#wheel-section" class="px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-bold bg-yellow-200 text-yellow-900 border-2 border-black rounded-lg hover:bg-yellow-300 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    🎰 Vòng Quay
+                </a>
+                <a href="#meme-maker-section" class="px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-bold bg-pink-100 text-pink-800 border-2 border-black rounded-lg hover:bg-pink-200 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    🎨 Chế Meme
+                </a>
+
+                <!-- BGM Audio Toggle -->
+                <button id="bgm-toggle-btn" class="px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-bold bg-white text-gray-900 border-2 border-black rounded-lg transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1 active:translate-y-0.5">
+                    <span id="bgm-notes" class="hidden text-red-600 font-bold animate-pulse">🎶</span>
+                    <span id="bgm-status">Nhạc: TẮT 🔇</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-3 sm:px-6 py-6 sm:py-10 space-y-12 sm:space-y-16 relative z-10">
+
+        <!-- ================= 1. HERO SECTION ================= -->
+        <section class="text-center pt-2 sm:pt-4">
+            <!-- Red Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-red-600 text-white border-3 border-black rounded-full font-black text-xs sm:text-sm uppercase shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-4 animate-pulse">
+                <span>🌹</span> CỘT MỐC TUỔI 22 RỰC RỠ • SẮC ĐỎ MAY MẮN <span>🌹</span>
+            </div>
+
+            <!-- Big Title -->
+            <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-gray-900 leading-tight mb-4">
+                CHÚC MỪNG SINH NHẬT <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-600 to-amber-500 underline decoration-wavy decoration-red-500">
+                    THẢO NHI 22 TUỔI! 🎂
+                </span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-sm sm:text-lg font-medium text-gray-700 leading-relaxed mb-6 px-2">
+                Hôm nay cô gái mê màu đỏ <b class="text-red-600 underline">Thảo Nhi</b> chính thức bước sang tuổi 22! Tuổi 22 - gấp đôi tuổi 11, tiền tài gấp mười, nhan sắc nở rộ như đóa hoa hồng nhung rạng rỡ và luôn tràn đầy năng lượng tích cực! 🥳✨
+            </p>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex flex-wrap justify-center gap-2.5 sm:gap-4 mb-8">
+                <button onclick="confetti.burst(window.innerWidth/2, window.innerHeight*0.4, 100); sound.playFanfare();" class="brutal-btn px-4 sm:px-6 py-2.5 sm:py-3 bg-red-600 text-white text-sm sm:text-base hover:bg-red-700">
+                    <span>🎉</span> Bắn Pháo Hoa Đỏ!
+                </button>
+                <a href="#cake-section" class="brutal-btn px-4 sm:px-6 py-2.5 sm:py-3 bg-amber-300 text-gray-900 text-sm sm:text-base hover:bg-amber-400">
+                    <span>🎂</span> Thổi Nến Tuổi 22
+                </a>
+                <a href="#bouquet-section" class="brutal-btn px-4 sm:px-6 py-2.5 sm:py-3 bg-rose-200 text-gray-900 text-sm sm:text-base hover:bg-rose-300">
+                    <span>💐</span> Tạo Bó Hoa Tặng Nhi
+                </a>
+                <a href="#wheel-section" class="brutal-btn px-4 sm:px-6 py-2.5 sm:py-3 bg-yellow-300 text-gray-900 text-sm sm:text-base hover:bg-yellow-400">
+                    <span>🎰</span> Vòng Quay May Mắn
+                </a>
+            </div>
+
+            <!-- Hero Highlight HTML/CSS Card (No AI images!) -->
+            <div class="max-w-3xl mx-auto brutal-box overflow-hidden bg-gradient-to-b from-red-500 to-rose-600 text-white p-6 sm:p-8 border-4 border-black">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <!-- Pure Vector Graphics Badge -->
+                    <div class="w-full md:w-1/2 flex flex-col items-center justify-center p-6 bg-white text-gray-900 rounded-2xl border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        <div class="text-5xl sm:text-6xl mb-2">👑🌹</div>
+                        <div class="text-4xl sm:text-5xl font-black text-red-600 font-mono tracking-tight">22 TUỔI</div>
+                        <div class="text-xs font-black uppercase text-amber-600 mt-1 tracking-widest">★ TUỔI MỚI ĐỎ RỰC RỠ ★</div>
+                        <div class="mt-3 flex gap-1 text-xl">
+                            <span>🍓</span><span>🎂</span><span>🐰</span><span>🎁</span>
+                        </div>
+                    </div>
+                    <!-- Right text -->
+                    <div class="w-full md:w-1/2 text-left space-y-3">
+                        <span class="inline-block px-3 py-1 bg-yellow-400 text-gray-900 font-black text-xs uppercase rounded-md border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                            Tuyên Ngôn Tuổi 22
+                        </span>
+                        <h2 class="text-xl sm:text-2xl font-black text-white leading-snug">
+                            "Màu đỏ đem lại may mắn, và Thảo Nhi đem lại tiếng cười!"
+                        </h2>
+                        <p class="text-red-100 text-xs sm:text-sm font-medium leading-relaxed">
+                            Bước sang tuổi 22, chúc Thảo Nhi mọi sự đều hanh thông, công việc nở hoa, tiền vô đầy ví, và luôn được cưng chiều như công chúa!
+                        </p>
+                        <div class="pt-1 flex flex-wrap gap-2 text-xs font-bold text-gray-900">
+                            <span class="bg-white px-2.5 py-1 border border-black rounded-lg shadow-sm">🌹 Thích Màu Đỏ</span>
+                            <span class="bg-white px-2.5 py-1 border border-black rounded-lg shadow-sm">✨ Giàu Sang Hạnh Phúc</span>
+                            <span class="bg-white px-2.5 py-1 border border-black rounded-lg shadow-sm">🐰 Đáng Yêu Hết Nấc</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 2. CAKE & CANDLE SECTION ================= -->
+        <section id="cake-section" class="scroll-mt-20">
+            <div class="brutal-box p-6 sm:p-10 bg-white text-center max-w-2xl mx-auto border-4 border-black">
+                <span class="text-xs font-black uppercase tracking-wider bg-red-600 text-white px-3.5 py-1 rounded-full border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    Nghi Thức Cầu Nguyện Tuổi 22 🎂
+                </span>
+                <h3 class="text-2xl sm:text-4xl font-black text-gray-900 mt-3 mb-2">Thổi 2 Cây Nến 22 Tuổi Nào Thảo Nhi!</h3>
+                <p class="text-gray-600 font-medium text-xs sm:text-sm mb-4">
+                    Nhắm mắt lại, ước 3 điều thiêng liêng nhất rồi bấm nút thổi nến nhé!
+                </p>
+
+                <!-- Animated Cake Container with Candles "2" and "2" -->
+                <div class="cake-wrapper my-4">
+                    <div class="cake">
+                        <!-- Two number candles: 2 and 2 -->
+                        <div class="candles-row">
+                            <!-- Candle 2 -->
+                            <div class="candle-container">
+                                <div class="flame"></div>
+                                <div class="smoke"></div>
+                                <div class="candle-wick"></div>
+                                <div class="candle-number">2</div>
+                            </div>
+                            <!-- Candle 2 -->
+                            <div class="candle-container">
+                                <div class="flame"></div>
+                                <div class="smoke"></div>
+                                <div class="candle-wick"></div>
+                                <div class="candle-number">2</div>
+                            </div>
+                        </div>
+
+                        <!-- Top Tier -->
+                        <div class="cake-tier tier-top">
+                            <div class="icing-drop"></div>
+                        </div>
+                        <!-- Middle Tier -->
+                        <div class="cake-tier tier-middle">
+                            <div class="icing-drop"></div>
+                        </div>
+                        <!-- Bottom Tier -->
+                        <div class="cake-tier tier-bottom">
+                            <div class="icing-drop"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blow Candle Button -->
+                <div class="mt-6 space-y-4">
+                    <button id="blow-candles-btn" class="brutal-btn px-6 sm:px-8 py-3.5 sm:py-4 bg-red-600 text-white text-base sm:text-xl hover:bg-red-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        🎂 Bấm Thổi Nến & Cầu Nguyện!
+                    </button>
+
+                    <!-- Blown Message Result (Initially Hidden) -->
+                    <div id="cake-blown-message" class="hidden mt-4 p-4 bg-red-50 border-3 border-red-500 rounded-xl text-red-950 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                        <div class="text-3xl mb-1">💥🎉💸</div>
+                        <h4 class="font-black text-lg sm:text-xl text-red-700">BÙM! VŨ TRỤ ĐÃ TIẾP NHẬN TÍN HIỆU!</h4>
+                        <p class="font-bold text-xs sm:text-sm text-red-800 mt-1 leading-relaxed">
+                            Vũ trụ chính thức kích hoạt: Tự động cộng 1 tuổi, nhân 10 độ giàu sang, xóa sạch calo của mọi ly trà sữa đã uống! Chúc em tuổi 22 luôn rạng rỡ xinh đẹp như đóa hồng đỏ thắm, tiền tài may mắn ngập tràn, vạn sự như ý và nụ cười hạnh phúc luôn nở trên môi! 🥳🎂👑🌹
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 3. BÉ THỎ VỖ BÉO (Kawaii Edition) ================= -->
+        <section id="bunny-section" class="scroll-mt-20">
+            <div class="brutal-box p-6 sm:p-8 bg-gradient-to-br from-amber-50 via-rose-50 to-red-50 border-4 border-black max-w-xl mx-auto text-center">
+                <span class="inline-block px-3.5 py-1 bg-amber-400 border-2 border-black rounded-full font-black text-xs uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-3">
+                    Góc Nuôi Thú Cưng Đáng Yêu 🐰
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-black text-gray-900 mb-1">Bé Thỏ Thảo Nhi Cưng Xỉu</h3>
+                <p class="text-gray-600 font-medium text-xs sm:text-sm mb-4">
+                    Cho bé thỏ ăn cà rốt & dâu tây đỏ để tích lũy năng lượng tuổi 22 nhé!
+                </p>
+
+                <!-- Feeding Counter & Status Badge -->
+                <div class="flex items-center justify-center gap-3 mb-4 flex-wrap">
+                    <div class="px-4 py-1.5 bg-white border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                        <span class="text-xs font-bold text-gray-500 block">Đã Nạp Năng Lượng</span>
+                        <span id="bunny-counter" class="text-2xl sm:text-3xl font-black text-red-600 font-mono">0</span>
+                    </div>
+                    <div class="px-4 py-2 bg-yellow-200 border-2 border-black rounded-xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs sm:text-sm font-black text-gray-900">
+                        Danh hiệu: <span id="bunny-rank-title" class="text-red-700">Thỏ Bé Xíu 🐇</span>
+                    </div>
+                </div>
+
+                <!-- Custom Vector SVG Kawaii Bunny (Ultra Cute) -->
+                <div id="bunny-svg-wrapper" class="w-48 sm:w-56 h-48 sm:h-56 mx-auto cursor-pointer p-2 bg-white rounded-3xl border-3 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center select-none hover:scale-105 active:scale-95 transition-transform">
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <defs>
+                            <!-- Soft Rosy Blush Gradient -->
+                            <radialGradient id="blushGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#ff758f" stop-opacity="0.65"/>
+                                <stop offset="100%" stop-color="#ff758f" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- Cute Fluffy Left Ear -->
+                        <g class="kawaii-ear-left">
+                            <path d="M 68 85 C 45 40, 52 5, 75 10 C 92 14, 88 50, 78 85 Z" fill="#ffffff" stroke="#1e1b18" stroke-width="3.5" stroke-linejoin="round"/>
+                            <path d="M 69 75 C 55 42, 60 18, 74 20 C 84 22, 80 50, 75 75 Z" fill="#ffccd5"/>
+                            <!-- Cute Strawberry Hairpin on ear -->
+                            <g transform="translate(62, 55) scale(0.7) rotate(-20)">
+                                <path d="M 12 5 C 22 5, 24 22, 12 28 C 0 22, 2 5, 12 5 Z" fill="#ef233c"/>
+                                <circle cx="8" cy="14" r="1" fill="#fff"/>
+                                <circle cx="16" cy="15" r="1" fill="#fff"/>
+                                <circle cx="12" cy="20" r="1" fill="#fff"/>
+                                <path d="M 8 5 Q 12 0 16 5 Q 12 8 8 5" fill="#2b9348"/>
+                            </g>
+                        </g>
+
+                        <!-- Cute Fluffy Right Ear -->
+                        <g class="kawaii-ear-right">
+                            <path d="M 132 85 C 155 40, 148 5, 125 10 C 108 14, 112 50, 122 85 Z" fill="#ffffff" stroke="#1e1b18" stroke-width="3.5" stroke-linejoin="round"/>
+                            <path d="M 131 75 C 145 42, 140 18, 126 20 C 116 22, 120 50, 125 75 Z" fill="#ffccd5"/>
+                        </g>
+
+                        <!-- Chubby Soft Body -->
+                        <ellipse cx="100" cy="155" rx="55" ry="38" fill="#ffffff" stroke="#1e1b18" stroke-width="3.5"/>
+                        <!-- Soft Belly -->
+                        <ellipse cx="100" cy="158" rx="36" ry="24" fill="#fff0f3"/>
+
+                        <!-- Chubby Kawaii Head -->
+                        <ellipse cx="100" cy="112" rx="64" ry="52" fill="#ffffff" stroke="#1e1b18" stroke-width="3.5"/>
+
+                        <!-- Big Soft Blushing Cheeks -->
+                        <circle cx="56" cy="120" r="14" fill="url(#blushGrad)"/>
+                        <circle cx="144" cy="120" r="14" fill="url(#blushGrad)"/>
+                        <!-- Cute Freckle/Blush Dots -->
+                        <circle cx="52" cy="118" r="1.5" fill="#e63946"/>
+                        <circle cx="58" cy="116" r="1.5" fill="#e63946"/>
+                        <circle cx="142" cy="116" r="1.5" fill="#e63946"/>
+                        <circle cx="148" cy="118" r="1.5" fill="#e63946"/>
+
+                        <!-- Kawaii Eyes Normal -->
+                        <g id="bunny-eyes-normal">
+                            <!-- Left Eye -->
+                            <ellipse cx="72" cy="106" rx="9" ry="12" fill="#2b2d42"/>
+                            <circle cx="70" cy="102" r="3.5" fill="#ffffff"/>
+                            <circle cx="75" cy="112" r="1.5" fill="#ffffff"/>
+                            <!-- Right Eye -->
+                            <ellipse cx="128" cy="106" rx="9" ry="12" fill="#2b2d42"/>
+                            <circle cx="126" cy="102" r="3.5" fill="#ffffff"/>
+                            <circle cx="131" cy="112" r="1.5" fill="#ffffff"/>
+                        </g>
+
+                        <!-- Kawaii Eyes Happy (Hidden initially) -->
+                        <g id="bunny-eyes-happy" class="hidden">
+                            <path d="M 64 108 Q 72 96 80 108" stroke="#1e1b18" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                            <path d="M 120 108 Q 128 96 136 108" stroke="#1e1b18" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- Tiny Cute Nose -->
+                        <polygon points="100,116 96,112 104,112" fill="#e63946"/>
+
+                        <!-- Cute 'w' Mouth -->
+                        <path d="M 94 121 Q 100 126 100 121 Q 100 126 106 121" stroke="#1e1b18" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+                        <!-- Cute Little Paws holding Red Strawberry -->
+                        <g transform="translate(100, 142)">
+                            <path d="M 0 -8 C 12 -8, 14 10, 0 16 C -14 10, -12 -8, 0 -8 Z" fill="#e63946" stroke="#1e1b18" stroke-width="2"/>
+                            <path d="M -4 -8 Q 0 -13 4 -8 Q 0 -5 -4 -8" fill="#52b788"/>
+                            <circle cx="-3" cy="2" r="0.8" fill="#fff"/>
+                            <circle cx="3" cy="3" r="0.8" fill="#fff"/>
+                            <!-- Left Paw -->
+                            <ellipse cx="-13" cy="2" rx="7" ry="6" transform="rotate(-15 -13 2)" fill="#ffffff" stroke="#1e1b18" stroke-width="2.5"/>
+                            <!-- Right Paw -->
+                            <ellipse cx="13" cy="2" rx="7" ry="6" transform="rotate(15 13 2)" fill="#ffffff" stroke="#1e1b18" stroke-width="2.5"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Feeding Buttons -->
+                <div class="mt-5 flex flex-wrap justify-center gap-2 sm:gap-3">
+                    <button id="feed-carrot-btn" class="brutal-btn px-4 py-2.5 bg-orange-400 text-gray-900 text-xs sm:text-sm font-black hover:bg-orange-500">
+                        🥕 Cho Ăn Cà Rốt
+                    </button>
+                    <button id="feed-strawberry-btn" class="brutal-btn px-4 py-2.5 bg-red-500 text-white text-xs sm:text-sm font-black hover:bg-red-600">
+                        🍓 Cho Ăn Dâu Đỏ
+                    </button>
+                    <button id="pet-bunny-btn" class="brutal-btn px-4 py-2.5 bg-rose-200 text-gray-900 text-xs sm:text-sm font-black hover:bg-rose-300">
+                        💖 Gãi Tai Xoa Đầu
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 4. TẠO BÓ HOA TẶNG THẢO NHI (Canvas Studio) ================= -->
+        <section id="bouquet-section" class="scroll-mt-20">
+            <div class="text-center mb-8">
+                <span class="inline-block px-4 py-1 bg-rose-300 border-2 border-black rounded-full font-black text-xs uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-2">
+                    Xưởng Cắm Hoa Nghệ Thuật 💐
+                </span>
+                <h3 class="text-2xl sm:text-4xl font-black text-gray-900">Tự Tay Gói Bó Hoa Tặng Thảo Nhi</h3>
+                <p class="text-gray-600 font-medium text-xs sm:text-sm max-w-xl mx-auto mt-1">
+                    Tùy chọn những đóa hoa rực rỡ, viết thiệp chúc mừng và tải ảnh bó hoa chất lượng cao về máy để lưu giữ kỷ niệm!
+                </p>
+            </div>
+
+            <div class="brutal-box p-5 sm:p-8 bg-white border-4 border-black max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+                    
+                    <!-- Left: Bouquet Canvas Area -->
+                    <div class="lg:col-span-7 flex flex-col items-center">
+                        <div class="w-full border-3 border-black rounded-2xl overflow-hidden bg-rose-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
+                            <canvas id="bouquet-canvas" class="max-w-full h-auto block"></canvas>
+                        </div>
+
+                        <!-- Status & Count -->
+                        <div class="w-full text-center mt-3">
+                            <span class="text-xs font-black uppercase text-gray-500">Số đóa hoa hiện tại:</span>
+                            <span id="bouquet-count" class="text-2xl font-black text-red-600 font-mono ml-1">22</span>
+                            <div id="bouquet-tag-msg"></div>
+                        </div>
+
+                        <!-- Download Bouquet Button -->
+                        <div class="w-full mt-3">
+                            <button id="download-bouquet-btn" class="brutal-btn w-full py-3.5 bg-red-600 text-white font-black text-sm sm:text-base hover:bg-red-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                📥 Tải Ảnh Bó Hoa Về Máy (PNG)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Controls & Flower Pickers -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <!-- 1. Pick Flower to Add -->
+                        <div>
+                            <label class="block text-xs font-black uppercase text-gray-700 mb-1.5">1. Bấm Chọn Đóa Hoa Để Thêm:</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="add-flower-btn brutal-btn py-2 bg-red-100 hover:bg-red-200 text-xs font-bold" data-flower-type="rose">
+                                    🌹 Hồng Đỏ
+                                </button>
+                                <button class="add-flower-btn brutal-btn py-2 bg-rose-100 hover:bg-rose-200 text-xs font-bold" data-flower-type="tulip">
+                                    🌷 Tulip Đỏ
+                                </button>
+                                <button class="add-flower-btn brutal-btn py-2 bg-yellow-100 hover:bg-yellow-200 text-xs font-bold" data-flower-type="sunflower">
+                                    🌻 Hướng Dương
+                                </button>
+                                <button class="add-flower-btn brutal-btn py-2 bg-pink-100 hover:bg-pink-200 text-xs font-bold" data-flower-type="carnation">
+                                    🌺 Cẩm Chướng
+                                </button>
+                                <button class="add-flower-btn brutal-btn py-2 bg-amber-100 hover:bg-amber-200 text-xs font-bold" data-flower-type="daisy">
+                                    🌼 Họa Mi
+                                </button>
+                                <button id="auto-22-flowers-btn" class="brutal-btn py-2 bg-red-600 text-white text-xs font-black hover:bg-red-700">
+                                    ✨ Bó 22 Bông
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Wrapping Paper Style -->
+                        <div>
+                            <label class="block text-xs font-black uppercase text-gray-700 mb-1">2. Phong Cách Giấy Gói Bó Hoa:</label>
+                            <select id="bouquet-wrapper-select" class="w-full p-2.5 bg-gray-50 border-2 border-black rounded-xl font-bold text-xs sm:text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] focus:outline-none">
+                                <option value="wrap-red">🎀 Giấy Gói Đỏ Ruby Sang Trọng</option>
+                                <option value="wrap-pink">🌸 Giấy Gói Hồng Pastel Ngọt Ngào</option>
+                                <option value="wrap-vintage">📜 Giấy Báo Kraft Vintage Cổ Điển</option>
+                                <option value="wrap-black">🖤 Giấy Gói Đen Huyền Bí Quý Phái</option>
+                            </select>
+                        </div>
+
+                        <!-- 3. Greeting Message on Tag -->
+                        <div>
+                            <label class="block text-xs font-black uppercase text-gray-700 mb-1">3. Lời Nhắn Gửi Trên Tấm Thiệp:</label>
+                            <input type="text" id="bouquet-card-text" value="Gửi tặng Thảo Nhi tuổi 22 rực rỡ 🌹" class="w-full p-2.5 bg-white border-2 border-black rounded-xl font-bold text-xs sm:text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] focus:outline-none">
+                        </div>
+
+                        <!-- Clear Button -->
+                        <div class="pt-1">
+                            <button id="clear-bouquet-btn" class="text-xs font-bold text-gray-500 hover:text-red-600 underline">
+                                ↺ Xóa hết hoa để cắm lại từ đầu
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 5. VÒNG QUAY MAY MẮN TUỔI 22 ================= -->
+        <section id="wheel-section" class="scroll-mt-20">
+            <div class="text-center mb-6">
+                <span class="inline-block px-4 py-1 bg-yellow-300 border-2 border-black rounded-full font-black text-xs uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-2 animate-pulse">
+                    🎰 VÒNG QUAY MAY MẮN TUỔI 22 🎰
+                </span>
+                <h3 class="text-2xl sm:text-4xl font-black text-gray-900 tracking-tight">Vòng Quay Phước Lành Sinh Nhật</h3>
+                <p class="text-gray-600 font-medium text-xs sm:text-sm max-w-xl mx-auto mt-1">
+                    Bấm quay hoặc tự do nhập thêm các ô tùy chọn (Hôn, Thơm má, Trà sữa...) theo ý thích!
+                </p>
+            </div>
+
+            <div class="brutal-box p-5 sm:p-7 bg-amber-50 border-4 border-black max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    
+                    <!-- Left: Wheel Canvas + Spin Button -->
+                    <div class="lg:col-span-7 flex flex-col items-center justify-center text-center">
+                        <div class="relative py-2 flex items-center justify-center">
+                            <canvas id="wheel-canvas" class="max-w-full h-auto block mx-auto drop-shadow-md"></canvas>
+                        </div>
+                        <div class="mt-4 w-full max-w-sm">
+                            <button id="spin-wheel-btn" class="brutal-btn w-full py-3.5 bg-red-600 text-white font-black text-base sm:text-lg hover:bg-red-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 transition-transform flex items-center justify-center gap-2">
+                                <span>🎰</span> QUAY THƯỞNG SINH NHẬT NGAY!
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Custom Options Manager -->
+                    <div class="lg:col-span-5 bg-white p-5 rounded-2xl border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] text-left space-y-4">
+                        <div class="flex items-center justify-between pb-2 border-b-2 border-gray-100">
+                            <div>
+                                <h4 class="font-black text-base text-gray-900 flex items-center gap-1.5">
+                                    <span>⚙️</span> Tùy Chỉnh Các Ô Quay
+                                </h4>
+                                <p class="text-[11px] font-bold text-gray-500">Tự do thêm ô hoặc xóa bớt ô tùy ý</p>
+                            </div>
+                            <span id="wheel-count-badge" class="px-2.5 py-1 bg-red-100 text-red-700 font-black text-xs rounded-full border border-red-300">
+                                4 Ô
+                            </span>
+                        </div>
+
+                        <!-- Add Option Input Form -->
+                        <form id="add-wheel-option-form" class="space-y-2">
+                            <label class="block text-xs font-black uppercase text-gray-700">Thêm Ô Mới Vào Vòng Quay:</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="new-wheel-option-input" maxlength="20" placeholder="VD: Hôn 💋, Thơm má 🥰, Đi dạo..." class="flex-1 p-2.5 bg-gray-50 border-2 border-black rounded-xl font-bold text-xs sm:text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:bg-white" required>
+                                <button type="submit" class="brutal-btn px-3.5 py-2.5 bg-red-600 text-white font-black text-xs hover:bg-red-700 rounded-xl whitespace-nowrap shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                                    + Thêm
+                                </button>
+                            </div>
+                            <p class="text-[11px] text-gray-400 font-semibold italic">Tối đa 20 ký tự mỗi ô. Hỗ trợ từ 2 đến 16 ô.</p>
+                        </form>
+
+                        <!-- Current Options Chips List -->
+                        <div>
+                            <div class="flex items-center justify-between mb-1.5">
+                                <label class="text-xs font-black uppercase text-gray-700">Danh Sách Ô Hiện Tại:</label>
+                                <button type="button" id="reset-wheel-btn" class="text-[11px] font-bold text-red-600 hover:underline">
+                                    ↺ Đặt lại mặc định
+                                </button>
+                            </div>
+                            <div id="wheel-chips-container" class="max-h-48 overflow-y-auto p-2 bg-gray-50 border-2 border-black rounded-xl flex flex-wrap gap-1.5">
+                                <!-- Chips dynamically populated by LuckyWheel -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Lucky Wheel Result Modal -->
+            <div id="wheel-result-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+                <div class="brutal-box p-6 sm:p-8 bg-white border-4 border-black max-w-md w-full text-center space-y-4">
+                    <div class="text-5xl animate-bounce">🎉✨💖</div>
+                    <span class="inline-block px-3 py-1 bg-yellow-300 border-2 border-black rounded-full font-black text-xs uppercase shadow-sm">
+                        CHÚC MỪNG THẢO NHI
+                    </span>
+                    <h4 id="wheel-result-title" class="text-2xl sm:text-3xl font-black text-red-600 leading-tight">
+                        Hôn 💋
+                    </h4>
+                    <p id="wheel-result-desc" class="text-xs sm:text-sm font-bold text-gray-700 bg-red-50 p-3.5 rounded-xl border border-red-200">
+                        Đặc quyền ngọt ngào tuổi 22 chính thức thuộc về em! Hãy thực hiện ngay nhé!
+                    </p>
+                    <div>
+                        <button id="close-wheel-modal-btn" class="brutal-btn w-full py-3 bg-red-600 text-white font-black text-sm hover:bg-red-700 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                            ✨ Nhận Phần Thưởng Này ✨
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 6. GÓC MEME COMIC HTML/CSS (Zero AI!) ================= -->
+        <section id="meme-gallery" class="scroll-mt-20">
+            <div class="text-center mb-10">
+                <span class="inline-block px-4 py-1 bg-red-200 text-red-900 border-2 border-black rounded-full font-black text-xs uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-2">
+                    Meme Hài Hước Thuần HTML/CSS 😂
+                </span>
+                <h3 class="text-2xl sm:text-4xl font-black text-gray-900">Góc Meme Tuổi 22 Của Thảo Nhi</h3>
+                <p class="text-gray-600 font-medium text-xs sm:text-sm max-w-xl mx-auto mt-1">
+                    Thiết kế đồ họa vector vui nhộn, không dùng ảnh AI, bảo đảm cười bể bụng!
+                </p>
+            </div>
+
+            <!-- Comic Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: 22 vs 11 -->
+                <div class="brutal-box p-5 bg-white border-3 border-black flex flex-col justify-between">
+                    <div>
+                        <div class="bg-red-500 text-white rounded-xl border-2 border-black p-4 text-center mb-3">
+                            <div class="text-3xl mb-1">🔢✨</div>
+                            <div class="text-2xl font-black font-mono">22 = 11 x 2</div>
+                            <div class="text-xs font-bold uppercase mt-1">Định luật toán học tuổi mới</div>
+                        </div>
+                        <h4 class="font-black text-base sm:text-lg text-gray-900">Toán Học Tuổi 22</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium mt-1">
+                            Tuổi 22 là gấp đôi tuổi 11. Nhưng độ đáng yêu mê trà sữa thì vẫn ngọt ngào như bé lên 3!
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t-2 border-dashed border-gray-200 flex justify-between items-center text-xs font-bold text-gray-500">
+                        <span>#Tuổi22 #NhiNhây</span>
+                        <button onclick="sound.playDing();" class="text-red-600 hover:underline">Quá Chuẩn 😂</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Red Color Theory -->
+                <div class="brutal-box p-5 bg-white border-3 border-black flex flex-col justify-between">
+                    <div>
+                        <div class="bg-rose-100 rounded-xl border-2 border-black p-4 text-center mb-3">
+                            <div class="text-3xl mb-1">🌹❤️🧧</div>
+                            <div class="text-xl font-black text-red-600">ĐỘ CUỒNG MÀU ĐỎ</div>
+                            <div class="text-xs font-bold text-red-800 mt-1">Son đỏ • Váy đỏ • Lì xì đỏ</div>
+                        </div>
+                        <h4 class="font-black text-base sm:text-lg text-gray-900">Lý Do Nhi Mê Màu Đỏ</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium mt-1">
+                            Màu đỏ không chỉ đem lại may mắn, mà màu đỏ còn là màu của tài khoản số dư nhảy số dương ngập tràn!
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t-2 border-dashed border-gray-200 flex justify-between items-center text-xs font-bold text-gray-500">
+                        <span>#TeamMàuĐỏ #MayMắn</span>
+                        <button onclick="sound.playSparkle();" class="text-red-600 hover:underline">May Mắn ✨</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Drake 22 -->
+                <div class="brutal-box p-5 bg-white border-3 border-black flex flex-col justify-between">
+                    <div>
+                        <div class="bg-amber-50 rounded-xl border-2 border-black p-3 space-y-2 mb-3">
+                            <div class="p-2 bg-red-100 border border-black rounded-lg text-xs font-bold text-red-900">
+                                🙅‍♀️ 22 tuổi phải làm người lớn nghiêm túc, bớt quậy!
+                            </div>
+                            <div class="p-2 bg-green-100 border border-black rounded-lg text-xs font-bold text-green-900">
+                                👉 Luôn tự tin, yêu đời và rạng rỡ như một đóa hồng nhung!
+                            </div>
+                        </div>
+                        <h4 class="font-black text-base sm:text-lg text-gray-900">Lựa Chọn Tuổi 22</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium mt-1">
+                            Người ta trưởng thành theo cách của người ta, còn Thảo Nhi trưởng thành bằng cách vui vẻ yêu đời!
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t-2 border-dashed border-gray-200 flex justify-between items-center text-xs font-bold text-gray-500">
+                        <span>#DrakeMeme #ChínhXác</span>
+                        <button onclick="sound.playHorn();" class="text-red-600 hover:underline">Hề Hước 🎺</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= 7. XƯỞNG CHẾ MEME (Meme Maker) ================= -->
+        <section id="meme-maker-section" class="scroll-mt-20">
+            <div class="text-center mb-8">
+                <span class="inline-block px-4 py-1 bg-red-600 text-white border-2 border-black rounded-full font-black text-xs uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-2">
+                    Studio Tự Chế 🎨
+                </span>
+                <h3 class="text-2xl sm:text-4xl font-black text-gray-900">Xưởng Tự Chế Meme Tặng Thảo Nhi</h3>
+                <p class="text-gray-600 font-medium text-xs sm:text-sm max-w-xl mx-auto mt-1">
+                    Chọn các mẫu thiết kế vector hoặc tải ảnh thật của Thảo Nhi lên để chế ảnh chúc mừng độc nhất vô nhị!
+                </p>
+            </div>
+
+            <div class="brutal-box p-6 sm:p-8 bg-white border-4 border-black max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+                    
+                    <!-- Left: Canvas Area -->
+                    <div class="lg:col-span-7 flex flex-col items-center">
+                        <div class="w-full border-3 border-black rounded-2xl overflow-hidden bg-gray-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
+                            <canvas id="meme-canvas" class="max-w-full h-auto cursor-crosshair block"></canvas>
+                        </div>
+                        <p class="text-xs text-gray-500 font-bold mt-2 text-center">
+                            👆 Nhấp và kéo sticker trên ảnh để di chuyển vị trí!
+                        </p>
+
+                        <!-- Download Action -->
+                        <div class="w-full mt-3">
+                            <button id="meme-download-btn" class="brutal-btn w-full py-3 bg-red-600 text-white font-black text-sm sm:text-base hover:bg-red-700 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                                📥 Tải Ảnh Meme Về Máy
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Controls -->
+                    <div class="lg:col-span-5 space-y-3.5">
+                        
+                        <!-- Template Select -->
+                        <div>
+                            <label class="block text-xs font-black uppercase text-gray-700 mb-1">1. Chọn Mẫu Nền Vector:</label>
+                            <select id="meme-template-select" class="w-full p-2 bg-white border-2 border-black rounded-xl font-bold text-xs sm:text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] focus:outline-none">
+                                <option value="queen_22">👑 Nữ Hoàng Đỏ 22 Tuổi</option>
+                                <option value="cute_bunny">🐰 Chú Thỏ Cute May Mắn</option>
+                                <option value="red_envelope">🧧 Bao Lì Xì Đỏ May Mắn</option>
+                            </select>
+                        </div>
+
+                        <!-- Or Upload Custom Photo -->
+                        <div>
+                            <label class="block text-xs font-black uppercase text-gray-700 mb-1">Hoặc Tải Ảnh Thảo Nhi Lên:</label>
+                            <input type="file" id="meme-file-upload" accept="image/*" class="w-full text-xs font-bold file:mr-2 file:py-1.5 file:px-2.5 file:rounded-lg file:border-2 file:border-black file:bg-yellow-300 file:font-black file:cursor-pointer border-2 border-black rounded-xl p-1 bg-gray-50">
+                        </div>
+
+                        <!-- Top Text -->
+                        <div>
+                            <label class="block text-xs font-black uppercase text-gray-700 mb-1">2. Chữ Trên (Top Text)</label>
+                            <input type="text" id="meme-top-text" value="CHÚC MỪNG SINH NHẬT THẢO NHI 22 TUỔI" class="w-full p-2 bg-white border-2 border-black rounded-xl font-black text-xs sm:text-sm uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] focus:outline-none">
+                        </div>
+
+                        <!-- Bottom Text -->
+                        <div>
+                            <label class="block text-xs font-black uppercase text-gray-700 mb-1">3. Chữ Dưới (Bottom Text)</label>
+                            <input type="text" id="meme-bottom-text" value="TUỔI MỚI GIÀU XỤ, ĐỎ RỰC RỠ NHA!" class="w-full p-2 bg-white border-2 border-black rounded-xl font-black text-xs sm:text-sm uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] focus:outline-none">
+                        </div>
+
+                        <!-- Font Size & Color -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-black uppercase text-gray-700 mb-1">Cỡ Chữ</label>
+                                <input type="range" id="meme-font-size" min="18" max="54" value="32" class="w-full cursor-pointer accent-red-600">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-black uppercase text-gray-700 mb-1">Màu Chữ</label>
+                                <input type="color" id="meme-text-color" value="#FFFFFF" class="w-full h-8 p-0.5 border-2 border-black rounded-xl cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- Stickers Drawer -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-xs font-black uppercase text-gray-700">4. Dán Sticker Vui Nhộn</label>
+                                <button id="meme-clear-stickers-btn" class="text-xs font-bold text-red-500 hover:underline">Xóa sticker</button>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5">
+                                <button class="sticker-btn text-lg p-1.5 bg-red-100 hover:bg-red-200 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" data-emoji="🌹">🌹</button>
+                                <button class="sticker-btn text-lg p-1.5 bg-yellow-100 hover:bg-yellow-200 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" data-emoji="👑">👑</button>
+                                <button class="sticker-btn text-lg p-1.5 bg-pink-100 hover:bg-pink-200 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" data-emoji="🎂">🎂</button>
+                                <button class="sticker-btn text-lg p-1.5 bg-amber-100 hover:bg-amber-200 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" data-emoji="🐰">🐰</button>
+                                <button class="sticker-btn text-lg p-1.5 bg-orange-100 hover:bg-orange-200 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" data-emoji="🥕">🥕</button>
+                                <button class="sticker-btn text-lg p-1.5 bg-green-100 hover:bg-green-200 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" data-emoji="💸">💸</button>
+                                <button class="sticker-btn text-lg p-1.5 bg-rose-100 hover:bg-rose-200 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" data-emoji="💖">💖</button>
+                            </div>
+                        </div>
+
+                        <!-- 1-Click Caption Presets (22 Years Old) -->
+                        <div class="pt-1">
+                            <label class="block text-xs font-black uppercase text-gray-700 mb-1.5">Gợi Ý Caption Tuổi 22 (1-Click):</label>
+                            <div class="space-y-1.5">
+                                <button class="meme-preset-btn w-full text-left text-xs font-bold p-2 bg-gray-50 hover:bg-red-50 border border-black rounded-lg truncate" data-top="22 TUỔI RỒI ĐẤY" data-bottom="NHƯNG TÂM HỒN VẪN LÀ BÉ CON 3 TUỔI">
+                                    💡 22 tuổi rồi đấy / Nhưng tâm hồn vẫn là bé con 3 tuổi
+                                </button>
+                                <button class="meme-preset-btn w-full text-left text-xs font-bold p-2 bg-gray-50 hover:bg-red-50 border border-black rounded-lg truncate" data-top="BƯỚC SANG TUỔI 22" data-bottom="TIỀN TÀI NHÂN ĐÔI, XINH ĐẸP NHÂN BỐN">
+                                    💡 Bước sang tuổi 22 / Tiền tài nhân đôi, xinh đẹp nhân bốn
+                                </button>
+                                <button class="meme-preset-btn w-full text-left text-xs font-bold p-2 bg-gray-50 hover:bg-red-50 border border-black rounded-lg truncate" data-top="HÔM NAY SINH NHẬT TUI" data-bottom="CẢ NĂM ĐỎ RỰC RỠ MAY MẮN NHA">
+                                    💡 Hôm nay sinh nhật tui / Cả năm đỏ rực rỡ may mắn nha
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 8. STATS ROAST (Tuổi 22) ================= -->
+        <section class="max-w-4xl mx-auto">
+            <div class="brutal-box p-6 sm:p-8 bg-white border-4 border-black">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-3 border-b-2 border-black">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-red-600 text-white font-black text-xs uppercase rounded-md border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                            Hồ Sơ Tuổi 22 📜
+                        </span>
+                        <h3 class="text-xl sm:text-2xl font-black text-gray-900 mt-2">Bảng Chỉ Số Năng Lực Của Thảo Nhi</h3>
+                    </div>
+                    <button id="reroll-roast-btn" class="brutal-btn px-4 py-2 bg-yellow-300 text-xs font-black hover:bg-yellow-400">
+                        🎲 Bốc Quẻ Roast Khác
+                    </button>
+                </div>
+
+                <!-- Daily Roast Quote Display -->
+                <div class="bg-red-50 p-4 rounded-xl border-2 border-red-300 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-6 text-center">
+                    <p id="daily-roast-quote" class="text-sm sm:text-base font-bold text-gray-800 italic transition-opacity duration-200">
+                        "22 tuổi rồi, chúc em luôn giữ nụ cười rạng rỡ và nguồn năng lượng tích cực lan tỏa đến mọi người!"
+                    </p>
+                </div>
+
+                <!-- Stat Bars -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-50 p-3.5 rounded-xl border-2 border-black">
+                        <div class="flex justify-between text-xs font-black mb-1">
+                            <span>Độ Xinh Đẹp Tuổi 22</span>
+                            <span class="text-red-600">100% (Đỉnh Chóp)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 h-3 rounded-full border border-black overflow-hidden">
+                            <div class="bg-red-600 h-full rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-3.5 rounded-xl border-2 border-black">
+                        <div class="flex justify-between text-xs font-black mb-1">
+                            <span>Tình Yêu Dành Cho Màu Đỏ</span>
+                            <span class="text-rose-600">VÔ CỰC 🌹</span>
+                        </div>
+                        <div class="w-full bg-gray-200 h-3 rounded-full border border-black overflow-hidden">
+                            <div class="bg-rose-500 h-full rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-3.5 rounded-xl border-2 border-black">
+                        <div class="flex justify-between text-xs font-black mb-1">
+                            <span>Chỉ Số May Mắn & Hạnh Phúc</span>
+                            <span class="text-amber-600">100% (Đỉnh Cao)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 h-3 rounded-full border border-black overflow-hidden">
+                            <div class="bg-amber-500 h-full rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-3.5 rounded-xl border-2 border-black">
+                        <div class="flex justify-between text-xs font-black mb-1">
+                            <span>Tốc Độ Trả Lời Tin Nhắn</span>
+                            <span class="text-purple-600">Tùy Tâm Trạng</span>
+                        </div>
+                        <div class="w-full bg-gray-200 h-3 rounded-full border border-black overflow-hidden">
+                            <div class="bg-purple-500 h-full rounded-full" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 9. SOUNDBOARD ================= -->
+        <section class="max-w-2xl mx-auto">
+            <div class="brutal-box p-6 bg-red-50 border-4 border-black text-center">
+                <span class="inline-block px-3 py-1 bg-red-600 text-white border-2 border-black rounded-full font-black text-xs uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-2">
+                    Soundboard Tấu Hài 🔊
+                </span>
+                <h3 class="text-xl sm:text-2xl font-black text-gray-900 mb-1">Hiệu Ứng Âm Thanh Cổ Vũ Nhi</h3>
+                <p class="text-xs text-gray-600 font-medium mb-4">
+                    Bấm các nút dưới đây để phát âm thanh tấu hài:
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                    <button class="soundboard-btn brutal-btn py-2.5 bg-white text-gray-900 hover:bg-yellow-200 text-xs sm:text-sm" data-sound="horn">
+                        🎺 Kèn Tiệc (Horn)
+                    </button>
+                    <button class="soundboard-btn brutal-btn py-2.5 bg-white text-gray-900 hover:bg-red-200 text-xs sm:text-sm" data-sound="fanfare">
+                        ✨ Khải Hoàn (Tadaa)
+                    </button>
+                    <button class="soundboard-btn brutal-btn py-2.5 bg-white text-gray-900 hover:bg-emerald-200 text-xs sm:text-sm" data-sound="applause">
+                        👏 Vỗ Tay Rần Rần
+                    </button>
+                    <button class="soundboard-btn brutal-btn py-2.5 bg-white text-gray-900 hover:bg-rose-200 text-xs sm:text-sm" data-sound="bruh">
+                        🗿 Âm Thanh "Bruh"
+                    </button>
+                    <button class="soundboard-btn brutal-btn py-2.5 bg-white text-gray-900 hover:bg-amber-200 text-xs sm:text-sm" data-sound="munch">
+                        🥕 Thỏ Ăn Rộp Rộp
+                    </button>
+                    <button class="soundboard-btn brutal-btn py-2.5 bg-white text-gray-900 hover:bg-cyan-200 text-xs sm:text-sm" data-sound="ding">
+                        🔔 Ting Ting Quà Về
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 12. FOOTER ================= -->
+        <footer class="pt-6 pb-10 text-center border-t-3 border-black space-y-3">
+            <div class="flex justify-center items-center gap-2 text-2xl animate-bounce">
+                <span>🌹</span>
+                <span>🎂</span>
+                <span>🐰</span>
+                <span>🍓</span>
+                <span>💖</span>
+            </div>
+            <h4 class="text-lg sm:text-xl font-black text-gray-900">
+                HAPPY 22ND BIRTHDAY THẢO NHI! 🌹
+            </h4>
+            <p class="text-xs sm:text-sm font-semibold text-gray-600 max-w-md mx-auto px-4">
+                Chúc Thảo Nhi một tuổi 22 rực rỡ như hoa hồng đỏ, luôn vui vẻ, hạnh phúc, bình an và vạn sự như ý! ❤️
+            </p>
+            <div class="pt-2">
+                <button onclick="confetti.cannon(); sound.playFanfare();" class="brutal-btn px-5 py-2 bg-red-600 text-white text-xs font-black hover:bg-red-700">
+                    🎊 Bắn Pháo Hoa Đỏ Chúc Mừng 🎊
+                </button>
+            </div>
+            <p class="text-[11px] text-gray-400 font-bold pt-2">
+                Designed with lots of love & red roses for Thảo Nhi (22 years old) © 2026
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/confetti.js"></script>
+    <script src="js/bouquet-maker.js"></script>
+    <script src="js/lucky-wheel.js"></script>
+    <script src="js/meme-maker.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
